@@ -1,0 +1,98 @@
+/* login.css and otp.css can be almost identical for background & layout */
+.screen-bg {
+    min-height: 100vh;
+    width: 100vw;
+    background: linear-gradient(120deg,#e0e7ff 0%,#93c5fd 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', 'Roboto', Arial, sans-serif;
+    overflow-x: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.center-card {
+    background: #fff;
+    padding: 2.5rem 2rem;
+    border-radius: 18px;
+    box-shadow: 0 2px 16px rgba(60,80,180,0.10);
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+}
+
+.form-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2563eb;
+    text-align: center;
+    margin-bottom: .5rem;
+}
+
+.form-label {
+    font-weight: 500;
+    color: #222;
+    margin-bottom: .3rem;
+}
+
+.form-input {
+    padding: .8rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.2s;
+    background: #f3f4f6;
+    color: black;
+}
+
+.form-input:focus {
+    border-color: #2563eb;
+}
+
+.form-button {
+    padding: .8rem 1rem;
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background .2s;
+    margin-top: 0.3rem;
+}
+
+.form-button:hover {
+    background: #1d4ed8;
+}
+
+.form-error {
+    color: #ef4444;
+    text-align: center;
+    font-size: .95rem;
+    margin-bottom: .6rem;
+}
+
+/* Responsive improvements */
+@media (max-width: 480px) {
+    .center-card {
+        padding: 1.3rem 0.7rem;
+        max-width: 95vw;
+    }
+    .form-title { font-size: 1.2rem;}
+}
+
+/* For OTP info styling (in OTP form) */
+.otp-info {
+    text-align: center;
+    color: #555;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+
+/* Optionally, add more spacing as needed */

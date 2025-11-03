@@ -1,0 +1,129 @@
+html, body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+.screen-bg {
+    min-height: 100vh;
+    width: 100vw;
+    background: linear-gradient(120deg,#e0e7ff 0%,#93c5fd 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', 'Roboto', Arial, sans-serif;
+}
+
+.list-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 2.5rem 2rem;
+    background: rgba(255,255,255,0.97);
+    border-radius: 20px;
+    box-shadow: 0 2px 16px rgba(60,80,180,0.09);
+}
+
+.list-title {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #2563eb;
+    margin-bottom: 1.3rem;
+    letter-spacing: .2px;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 2rem;
+    width: 100%;
+}
+
+.restaurant-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 1px 10px rgba(60,80,180,0.10);
+    padding: 1.4rem 1.1rem 1rem 1.1rem;
+    transition: box-shadow 0.22s, transform 0.18s;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .95rem;
+    border: 1px solid #e5e7eb;
+}
+
+.restaurant-card:hover {
+    box-shadow: 0 4px 22px rgba(60,80,180,0.16);
+    transform: translateY(-4px) scale(1.02);
+}
+
+.restaurant-image {
+    width: 100%;
+    max-width: 220px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 13px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 6px rgba(60,80,180,0.07);
+}
+
+.restaurant-name {
+    font-size: 1.18rem;
+    font-weight: 650;
+    color: #1e293b;
+    text-align: center;
+}
+
+.restaurant-address {
+    font-size: 1rem;
+    color: #52525b;
+    text-align: center;
+}
+
+.restaurant-rating {
+    font-size: .98rem;
+    font-weight: 500;
+    color: #1d4ed8;
+    background: #dbeafe;
+    padding: 5px 14px;
+    border-radius: 10px;
+    margin-top: .2rem;
+    letter-spacing: .05em;
+}
+
+@media (max-width: 900px) {
+    .list-container {
+        max-width: 98vw;
+        padding: 2rem 0.5rem;
+    }
+    .cards-grid {
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .list-container {
+        padding: 1.1rem 0.18rem;
+        border-radius: 0;
+    }
+    .cards-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .list-title {
+        font-size: 1.3rem;
+    }
+    .restaurant-card {
+        padding: 1rem 0.4rem;
+    }
+    .restaurant-image {
+        max-width: 315px;
+        height: 150px;
+    }
+}
